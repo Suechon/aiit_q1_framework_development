@@ -108,3 +108,11 @@ Railsチュートリアル運営チーム<br>
   ソースコードのライセンスは <a href='https://github.com/yasslab/codespaces-railstutorial/blob/main/LICENSE'>LICENSE</a> をご確認ください。<br>
   ロゴ画像やデモ動画などは各制作者の著作物となります。
 </small>
+
+# Ruby on Rails Tutorial
+
+## "hello, world!"
+
+This is the first application for the
+[*Ruby on Rails Tutorial*](https://railstutorial.jp/)
+by [Michael Hartl](https://www.michaelhartl.com/). Hello, world!
