@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  # /usersのページ
+  # 関数が/users/以降のurlになる
   before_action :set_user, only: %i[show edit update destroy]
 
   # GET /users or /users.json
@@ -8,7 +10,19 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
-    render html: User.first.microposts.first.content
+    @id = params[:id]
+    @existsUser = User.exists?(id: @id)
+    # render html: @existsUser
+    if @existsUser
+      @post = Micropost.where(user_id: @id)
+      if !@post.blank? && !@post[0].blank?
+        render html: @post[0].content
+      else
+        render html: 'postが存在しません'
+      end
+    else
+      render html: ユーザが存在しません
+    end
   end
 
   # GET /users/new
